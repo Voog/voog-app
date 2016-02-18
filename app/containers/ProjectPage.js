@@ -5,7 +5,7 @@ import * as ProjectActions from '../actions/projects';
 
 function mapStateToProps(state, props) {
   return {
-    project: state.projects.get(props.params.project).toJS()
+    project: state.projects.get(props.params.project)
   };
 }
 
