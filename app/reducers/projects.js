@@ -1,7 +1,9 @@
 import { ADD_PROJECT } from '../actions/projects';
 import Immutable from 'immutable';
 
-let initialState = Immutable.Map().set('voog.com', Immutable.Map({host: 'voog.com', name: 'Voog', token: 'Jolo'}));
+let initialState = Immutable.Map()
+  .set('voog.com', Immutable.Map({host: 'voog.com', name: 'Voog', token: 'Jolo'}))
+  .set('galojan.com', Immutable.Map({host: 'galojan.com', name: 'Galojan', token: 'Pohh'}));
 
 export default function projects(state = initialState, action) {
   switch (action.type) {

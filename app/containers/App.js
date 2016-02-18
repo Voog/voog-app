@@ -1,14 +1,14 @@
 import React, { Component, PropTypes } from 'react';
 
-export default class App extends Component {
-  static propTypes = {
-    children: PropTypes.element.isRequired
-  };
+import Home from '../components/Home';
 
+export default class App extends Component {
   render() {
     return (
       <div className="container">
-        {this.props.children}
+        <Home>
+          {this.props.children}
+        </Home>
         {
           (() => {
             if (process.env.NODE_ENV !== 'production') {

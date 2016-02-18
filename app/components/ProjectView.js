@@ -3,12 +3,13 @@ import styles from './ProjectView.module.css';
 
 export default class ProjectView extends React.Component {
   render() {
-    let files = ['style.css', 'pohhjolo.css'];
+    let {project} = this.props;
+    let files = ['style.css', 'foo.css'];
 
     return (
       <div className={styles.container}>
         <div className={styles.header}>
-          <div className={styles.title}>voog.com</div>
+          <div className={styles.title}>{project.host}</div>
           <div className={styles.syncbutton}>Sync</div>
         </div>
         <div className={styles.files}>

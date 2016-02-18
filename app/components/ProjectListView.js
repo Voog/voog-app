@@ -16,12 +16,12 @@ export default class ProjectListView extends Component {
   }
 
   handleAddClick() {
+    this.props.addProject(this.state.host, this.state.token, this.state.name);
     this.state = {host: '', token: '', name: ''};
-    addProject(this.state.host, this.state.token, this.state.name);
   }
 
   render() {
-    let {projects, addProject} = this.props;
+    let {projects} = this.props;
 
     return (
       <div className={styles.container}>
