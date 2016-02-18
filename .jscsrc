@@ -20,6 +20,7 @@
   "requireCapitalizedComments": false,
   "requireCapitalizedConstructors": true,
   "requireCommaBeforeLineBreak": true,
+  "requireCurlyBraces": false,
   "requireDollarBeforejQueryAssignment": true,
   "requireDotNotation": true,
   "requireEarlyReturn": false,

@@ -14,7 +14,7 @@ export default class ProjectView extends React.Component {
         <div className={styles.files}>
           {
             files.map((file, idx) => {
-              return <div>{file}</div>;
+              return <div key={idx}>{file}</div>;
             })
           }
         </div>
