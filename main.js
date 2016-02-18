@@ -7,6 +7,9 @@ const app = electron.app;
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow;
 
+// Disable old styles of using built-in modules
+process.env.ELECTRON_HIDE_INTERNAL_MODULES = 'true';
+
 if (process.env.NODE_ENV === 'development') {
   require('electron-debug')();
 }

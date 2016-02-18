@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 200px;
+  height: 100%;
+
+  background-color: rgba(0,0,0,0.05);
+}
+
+.listContainer {
+  flex-grow: 1;
+
+  background-color: 'red';
+}
+
+.addContainer {
+  padding: 10px;
+  text-align: center;
+
+  background-color: rgba(0,0,0,0.1);
+}
