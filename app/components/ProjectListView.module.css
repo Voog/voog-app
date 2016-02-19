@@ -12,6 +12,8 @@
 .listContainer {
   flex-grow: 1;
 
+  overflow: auto;
+
   background-color: 'red';
 }
 

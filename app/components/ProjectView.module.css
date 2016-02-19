@@ -3,6 +3,7 @@
   flex-direction: column;
   flex-grow: 1;
   justify-content: space-between;
+  overflow: auto;
 }
 
 .header {
@@ -27,4 +28,8 @@
 .files {
   flex-grow: 1;
   padding: 10px 20px;
+}
+
+.filelist {
+  width: 100%;
 }

@@ -12,11 +12,18 @@ export default class ProjectView extends React.Component {
           <div className={styles.syncbutton}>Sync</div>
         </div>
         <div className={styles.files}>
-          {
-            project.get('items').toList().map((item, idx) => {
-              return <div key={idx}>{item.get('name')}</div>;
-            })
-          }
+          <table className={styles.filelist}>
+            {
+              project.get('files').map((item, idx) => {
+                return (
+                  <tr key={idx}>
+                    <td>{item.get('file')}</td>
+                    <td>{item.get('size')}</td>
+                  </tr>
+                )
+              })
+            }
+          </table>
         </div>
       </div>
     );
