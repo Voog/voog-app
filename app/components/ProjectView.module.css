@@ -17,12 +17,36 @@
   float: left;
 }
 
-.syncbutton {
+.refreshbutton {
+  display: inline-block;
+  cursor: pointer;
+  margin-left: .5em;
+}
+
+:global(.refreshLoading) svg {
+  animation-name: rotateThis;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotateThis {
+  from { transform: scale( 1 ) rotate( 0deg );   }
+  to   { transform: scale( 1 ) rotate( 360deg ); }
+}
+
+.pushbutton,
+.pullbutton {
   float: right;
   background-color: green;
   color: white;
   padding: 3px 10px;
   border-radius: 3px;
+  cursor: pointer;
+}
+
+.pushbutton {
+  margin-left: .5em;
 }
 
 .files {
@@ -32,4 +56,34 @@
 
 .filelist {
   width: 100%;
+}
+
+.filerow td:first-child {
+  padding-left: 1em;
+}
+
+.expandedIcon,
+.folderName,
+.childrenLength {
+  cursor: pointer;
+}
+
+.folderheading {
+   margin: 0;
+}
+
+.expandedIcon {
+  display: inline-block;
+  min-width: 1em;
+}
+
+.folderName,
+.fileheader {
+  font-weight: 500;
+}
+
+.childrenLength {
+  font-weight: 400;
+  opacity: .9;
+  padding-left: 0.5em;
 }

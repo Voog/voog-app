@@ -9,14 +9,9 @@ export const ADD_PROJECT = 'ADD_PROJECT';
 export function loadProjects() {
   return {
     type: LOAD_PROJECTS,
-    projects: Kit.config.sites().map(site => {
-      let fileGroups = Kit.sites.filesFor(site.host);
-
-      site.files = ['assets', 'components', 'images', 'javascripts', 'layouts', 'stylesheets'].reduce((memo, group) => {
-        memo = memo.concat(fileGroups[group]);
-        return memo;
-      }, []);
-
+    projects: Kit.sites.names().map(name => {
+      var site = Kit.sites.byName(name);
+      site.files = Kit.sites.filesFor(name);
       return site;
     })
   };

@@ -1,4 +1,24 @@
 .container {
   display: block;
   padding: 5px 10px;
+  text-decoration: none;
+  font-size: 14px;
+  color: rgb(0,0,0);
 }
+
+.containeractive {
+  font-weight: 500;
+}
+
+.container + .container {
+  border-top: 1px solid rgba(0,0,0,.1);
+}
+
+.container:hover {
+  background-color: rgba(0,0,0,.025);
+}
+
+.container:last-child {
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
